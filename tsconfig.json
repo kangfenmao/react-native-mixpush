@@ -2,7 +2,7 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "react-native-mixpush": ["./src/index"]
+      "@kangfenmao/react-native-mixpush": ["./src/index"]
     },
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,

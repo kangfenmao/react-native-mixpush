@@ -1,5 +1,5 @@
 {
-  "name": "react-native-mixpush",
+  "name": "@kangfenmao/react-native-mixpush",
   "version": "0.1.0",
   "description": "React naitve push for iOS and Android",
   "main": "lib/commonjs/index",
@@ -113,7 +113,6 @@
           "quoteProps": "consistent",
           "singleQuote": true,
           "tabWidth": 2,
-          "trailingComma": "es5",
           "useTabs": false
         }
       ]
@@ -124,11 +123,14 @@
     "lib/"
   ],
   "prettier": {
-    "quoteProps": "consistent",
-    "singleQuote": true,
     "tabWidth": 2,
-    "trailingComma": "es5",
-    "useTabs": false
+    "semi": false,
+    "singleQuote": true,
+    "jsxBracketSameLine": true,
+    "endOfLine": "lf",
+    "trailingComma": "none",
+    "arrowParens": "avoid",
+    "printWidth": 100
   },
   "react-native-builder-bob": {
     "source": "src",

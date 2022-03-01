@@ -4,10 +4,12 @@ buildscript {
             google()
             mavenCentral()
             jcenter()
+            maven { url 'http://developer.huawei.com/repo/' }
         }
 
         dependencies {
             classpath 'com.android.tools.build:gradle:3.5.3'
+            classpath 'com.huawei.agconnect:agcp:1.4.2.300'
         }
     }
 }
@@ -25,7 +27,6 @@ android {
         targetSdkVersion safeExtGet('Mixpush_targetSdkVersion', 29)
         versionCode 1
         versionName "1.0"
-
     }
 
     buildTypes {
@@ -56,4 +57,11 @@ repositories {
 dependencies {
     //noinspection GradleDynamicVersion
     implementation "com.facebook.react:react-native:+"  // From node_modules
+    def mixpush_version = '2.3.4'
+    implementation "io.github.mixpush:mixpush-core:$mixpush_version" // 核心包
+    implementation "io.github.mixpush:mixpush-mi:$mixpush_version" // 小米推送
+    implementation "io.github.mixpush:mixpush-meizu:$mixpush_version"  // 魅族推送
+    implementation "io.github.mixpush:mixpush-huawei:$mixpush_version"  // 华为推送
+    implementation "io.github.mixpush:mixpush-oppo:$mixpush_version"  // OPPO推送
+    implementation "io.github.mixpush:mixpush-vivo:$mixpush_version"  // VIVO推送
 }
